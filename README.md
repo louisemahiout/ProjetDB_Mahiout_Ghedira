@@ -1,109 +1,138 @@
 # ProjetDB_Mahiout_Ghedira
 
-Prompt final donnée à l'IA: 
-Tu travailles dans le domaine de l’événementiel culturel et musical. Ton entreprise privée a comme activité principale l’organisation de concerts, festivals et tournées artistiques à l’échelle nationale et internationale. C’est une entreprise privée similaire à Live Nation, AEG Presents ou CTS Eventim. Les données collectées concernent notamment : la planification des événements, la gestion des artistes et de leurs contrats, la gestion des lieux (salles, stades, espaces extérieurs), la billetterie (catégories de billets, ventes, tarifs, zones), la gestion des spectateurs et participants, l’affectation du personnel (techniciens, agents de sécurité, managers, coordinateurs), la gestion du matériel technique (sonorisation, éclairage, scène), les partenariats et sponsors, la sécurité et les autorisations administratives. Inspire-toi des sites institutionnels suivants : https://www.livenationentertainment.com/, https://www.aegpresents.com/, https://www.eventim.fr/.
- 
- Ton entreprise privée veut appliquer MERISE pour concevoir un système d'information. Tu es chargé de la partie analyse, c’est-à-dire de collecter les besoins auprès de l’entreprise. Elle a fait appel à un étudiant en ingénierie informatique pour réaliser ce projet, tu dois lui fournir les informations nécessaires pour qu’il applique ensuite lui-même les étapes suivantes de conception et développement de la base de données.
- 
-D’abord, établis les règles de gestions des données de ton entreprise privée, sous la forme d'une liste à puce. Elles doivent correspondre aux informations que fournit quelqu’un qui connaît le fonctionnement de l’entreprise, mais pas comment se construit un système d’information. Les règles doivent inclure les relations et contraintes principales entre événements, artistes, contrats, lieux, billets, spectateurs, personnel, matériel et sponsors, et être cohérentes et réalistes.
- 
-Ensuite, à partir de ces règles, fournis un dictionnaire de données brutes avec les colonnes suivantes, regroupées dans un tableau : signification de la donnée, type, taille en nombre de caractères ou de chiffres. Il doit y avoir entre 25 et 35 données. Il sert à fournir des informations supplémentaires sur chaque donnée (taille et type) mais sans a priori sur comment les données vont être modélisées ensuite.
- 
-Fournis donc les règles de gestion et le dictionnaire de données. 
-
+Mini-Projet – Partie 1
+Phase d’analyse – Méthode MERISE
 Réponse générée par l'IA: 
+RÈGLES DE GESTION 
 
-REGLES METIERS: 
-🎵 Gestion des événements
+1️⃣ Événements
 
-Un événement peut être un concert unique, une date d’une tournée ou un festival multi-jours.
+	•	Un événement est identifié de manière unique.
 
-Chaque événement possède un identifiant unique, un nom, une date de début et une date de fin, et un statut (en préparation, confirmé, reporté, annulé, complet).
+	•	Un événement possède un nom, une date et une heure.
 
-Un événement se déroule dans un seul lieu, mais un lieu peut accueillir plusieurs événements à différentes dates.
+	•	Un événement se déroule dans un seul lieu.
 
-Une tournée regroupe plusieurs événements dans différentes villes et pays.
+	•	Un lieu peut accueillir plusieurs événements.
 
-Un festival peut contenir plusieurs artistes programmés sur plusieurs créneaux horaires.
+	•	Un événement peut accueillir plusieurs artistes.
 
-Un événement ne peut être confirmé que si le contrat des artistes est signé et que le lieu est réservé.
+	•	Un artiste peut participer à plusieurs événements.
 
-🎤 Gestion des artistes
+	•	Un événement propose plusieurs catégories de billets.
 
-Un artiste possède une fiche unique (nom, type : solo/groupe, nationalité, agent).
+	•	Chaque catégorie de billet est définie pour un seul événement.
 
-Un artiste peut participer à plusieurs événements.
+⸻
 
-Chaque artiste signe un contrat spécifique pour chaque événement ou tournée.
+2️⃣ Artistes
 
-Un contrat définit le cachet, les conditions techniques et les obligations logistiques.
+	•	Un artiste est identifié de manière unique.
 
-Certains artistes ont des exigences techniques spécifiques (rider technique).
+	•	Un artiste possède un nom de scène.
 
-📄 Gestion des contrats
+	•	Un artiste est associé à un genre musical principal.
 
-Chaque contrat est lié à un artiste et à un événement.
+	•	Un artiste peut signer plusieurs contrats.
 
-Un contrat possède un montant, une date de signature et un statut (en négociation, signé, annulé).
+	•	Un contrat concerne un seul artiste.
 
-Aucun événement ne peut être mis en vente sans contrat signé.
+⸻
 
-🏟 Gestion des lieux
+3️⃣ Contrats
 
-Chaque lieu possède un identifiant unique.
+	•	Un contrat est identifié de manière unique.
 
-Chaque lieu a une capacité maximale légale et un type (intérieur/extérieur).
+	•	Un contrat est établi entre l’entreprise et un artiste.
 
-Un lieu est situé dans une ville et un pays précis et peut nécessiter des autorisations administratives.
+	•	Un contrat est lié à un événement précis.
 
-🎟 Gestion de la billetterie
+	•	Un événement peut comporter plusieurs contrats.
 
-Chaque événement propose plusieurs catégories de billets (VIP, carré or, fosse, gradin…).
+	•	Un contrat contient un montant de cachet convenu.
 
-Chaque catégorie possède un prix défini.
+⸻
 
-Un billet correspond à un seul événement et appartient à une catégorie précise.
+4️⃣ Lieux
 
-Le nombre de billets vendus ne peut dépasser la capacité autorisée du lieu.
+	•	Un lieu est identifié de manière unique.
 
-Une vente de billet est liée à un spectateur, qui peut acheter plusieurs billets pour un même événement.
+	•	Un lieu possède un nom, une adresse, une ville et un pays.
 
-👥 Gestion des spectateurs
+	•	Un lieu possède une capacité maximale.
 
-Chaque spectateur possède un identifiant unique et des informations personnelles (nom, prénom, email, téléphone).
+	•	Un lieu peut être associé à plusieurs équipements matériels.
 
-Les billets peuvent être nominatif si l’événement l’exige.
+⸻
 
-👷 Gestion du personnel
+5️⃣ Billets et catégories
 
-Le personnel comprend techniciens, agents de sécurité, coordinateurs et managers.
+	•	Une catégorie de billet est identifiée de manière unique.
 
-Un employé peut être affecté à plusieurs événements avec une fonction précise et une durée de présence.
+	•	Une catégorie de billet appartient à un seul événement.
 
-Certains événements nécessitent un nombre minimum d’agents de sécurité.
+	•	Une catégorie de billet possède un prix.
 
-🔊 Gestion du matériel technique
+	•	Une catégorie de billet possède un nombre de places disponibles.
 
-Le matériel comprend sonorisation, éclairage, écrans, scènes et barrières.
+	•	Un billet est identifié de manière unique.
 
-Chaque équipement peut être utilisé sur plusieurs événements à différentes dates, avec des quantités précises.
+	•	Un billet appartient à une seule catégorie.
 
-Le matériel peut être interne ou loué.
+	•	Un billet est acheté par un seul spectateur.
 
-🤝 Gestion des sponsors et partenaires
+	•	Un spectateur peut acheter plusieurs billets.
 
-Un sponsor peut financer plusieurs événements.
+⸻
 
-Un événement peut avoir plusieurs sponsors.
+6️⃣ Spectateurs
 
-Chaque partenariat définit le montant investi et les contreparties (ex : visibilité, logo, scène dédiée).
+	•	Un spectateur est identifié de manière unique.
 
-🛡 Sécurité et autorisations
+	•	Un spectateur possède un nom, un prénom et une adresse email.
 
-Chaque événement doit disposer d’autorisations administratives.
+	•	Un spectateur peut acheter plusieurs billets.
 
-Un plan de sécurité doit être validé avant la tenue de l’événement.
+	•	Un billet ne peut appartenir qu’à un seul spectateur.
 
+⸻
+
+7️⃣ Personnel
+
+	•	Un membre du personnel est identifié de manière unique.
+
+	•	Un membre du personnel possède un nom et une fonction.
+
+	•	Un membre du personnel peut être affecté à plusieurs événements.
+
+	•	Un événement mobilise plusieurs membres du personnel.
+
+⸻
+
+8️⃣ Matériel
+
+	•	Un matériel est identifié de manière unique.
+
+	•	Un matériel possède un type et un état.
+
+	•	Un matériel peut être utilisé pour plusieurs événements.
+
+	•	Un événement peut nécessiter plusieurs matériels.
+
+⸻
+
+9️⃣ Sponsors
+
+	•	Un sponsor est identifié de manière unique.
+
+	•	Un sponsor possède un nom et un secteur d’activité.
+
+	•	Un sponsor peut financer plusieurs événements.
+
+	•	Un événement peut avoir plusieurs sponsors.
+
+	•	Pour chaque participation d’un sponsor à un événement, un montant de sponsoring est défini.
+ 
 DICTIONNAIRE: 
 | Signification de la donnée | Type                | Taille                       |
 | -------------------------- | ------------------- | ---------------------------- |
