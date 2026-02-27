@@ -2,7 +2,9 @@
 
 Mini-Projet – Partie 1
 Phase d’analyse – Méthode MERISE
-Réponse générée par l'IA: 
+Réponse générée par l'IA avec le prompt final: 
+
+
 RÈGLES DE GESTION 
 
 1️⃣ Événements
@@ -170,7 +172,7 @@ DICTIONNAIRE:
 | Nom sponsor                | Alphanumérique      | 100 caractères               |
 | Montant sponsoring         | Numérique (décimal) | 12 chiffres dont 2 décimales |
 
-MCD:
+MCD (looping):
 <img width="2363" height="1030" alt="image" src="https://github.com/user-attachments/assets/84d72e6a-1cfd-4bdf-9f0c-b7e969cd1df1" />
 
 
