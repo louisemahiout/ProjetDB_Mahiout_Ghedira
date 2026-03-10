@@ -177,4 +177,18 @@ MCD (looping):
 
 
 
+MLD:
+LIEU = (id_lieu INT, nom_lieu VARCHAR(100), capacité_max_lieu INT, ville_lieu VARCHAR(50));
+ARTISTE = (id_art INT, nom_art VARCHAR(100), type_art VARCHAR(20), nationalite_art VARCHAR(50));
+EMPLOYE = (id_emp INT, nom_emp VARCHAR(50), fonction_emp VARCHAR(50), #id_emp_supérieur);
+SPONSOR = (id_spons INT, nom_spons VARCHAR(50));
+MATERIEL = (id_mat INT, type_mat VARCHAR(50));
+PARTICIPANT = (id_part INT, nom_part VARCHAR(50), email_part VARCHAR(100), num_part INT);
+EVENEMENT = (id_ev INT, nom_ev VARCHAR(100), type_ev VARCHAR(20), date_debut_ev DATETIME, date_fin_ev DATETIME, statut_ev VARCHAR(20), #id_lieu);
+CONTRAT = (#id_ev, #id_art, id_contr INT, montant_contr DECIMAL(12,2), date_signature_contr DATE, statut_contr VARCHAR(20));
+CATEGORIE_BILLET = (id_cat INT, prix_cat INT, nbr_place_dispo INT, #id_ev);
+BILLET = (id_billet INT, #id_cat, #id_part*);
+AFFECTER = (#id_ev, #id_emp);
+UTILISER = (#id_ev, #id_mat, quantite INT);
+FINANCER = (#id_ev, #id_spons, montant DECIMAL(12,2));
 
