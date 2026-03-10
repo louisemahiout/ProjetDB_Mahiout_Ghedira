@@ -173,7 +173,8 @@ DICTIONNAIRE:
 | Montant sponsoring         | Numérique (décimal) | 12 chiffres dont 2 décimales |
 
 MCD (looping):
-<img width="2363" height="1030" alt="image" src="https://github.com/user-attachments/assets/84d72e6a-1cfd-4bdf-9f0c-b7e969cd1df1" />
+<img width="1458" height="675" alt="image" src="https://github.com/user-attachments/assets/87daabc2-cafa-4e64-8847-7775198f1200" />
+
 
 
 
