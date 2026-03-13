@@ -94,7 +94,7 @@ CREATE TABLE BILLET(
    id_part INT,
    PRIMARY KEY(id_billet),
    FOREIGN KEY(id_cat) REFERENCES CATEGORIE_BILLET(id_cat)
-   on delete set null
+   on delete cascade
    on update cascade,
    FOREIGN KEY(id_part) REFERENCES PARTICIPANT(id_part)
    on delete set NULL
