@@ -205,3 +205,16 @@ UTILISER = (#id_ev, #id_mat, quantite INT);
 
 FINANCER = (#id_ev, #id_spons, montant DECIMAL(12,2));
 
+Scénario d'utilisation:
+
+La base de données a été conçue pour gérer l’organisation d’événements musicaux tels que des concerts ou des festivals organisés dans différents lieux et villes. Elle est utilisée par une toute nouvelle entreprise privée spécialisée dans la production d’événements musicaux nommée SNLAgency, qui s’occupe de planifier les événements, de gérer les artistes invités, de vendre des billets aux participants et de gérer les relations avec les sponsors.
+
+Dans ce contexte, l’utilisateur principal de la base de données est le responsable de production événementielle. Son rôle est de superviser l’organisation des événements et de s’assurer que toutes les ressources nécessaires sont bien mobilisées pour leur bon déroulement.
+
+Pour accomplir ses tâches, il doit interroger la base de données afin d’obtenir différentes informations. Il doit notamment pouvoir consulter les événements organisés par l’entreprise, leurs dates de début et de fin, leur statut ainsi que les lieux dans lesquels ils se déroulent. Il doit également pouvoir connaître les artistes participant aux événements, leur type (DJ, groupe, chanteur, etc.) ainsi que les contrats signés avec eux, notamment les montants et les dates de signature.
+
+Le responsable de production doit également pouvoir accéder aux informations liées à la billetterie, comme les différentes catégories de billets proposées pour chaque événement, leurs prix, le nombre de places disponibles ainsi que les billets achetés par les participants. Il doit aussi pouvoir consulter les informations concernant les participants, telles que leur nom, leur adresse email et leur numéro de téléphone.
+
+Enfin, il doit pouvoir consulter les informations nécessaires à l’organisation logistique et financière des événements, notamment les employés affectés à chaque événement, le matériel utilisé et les quantités nécessaires, ainsi que les sponsors qui financent les événements et les montants associés.
+
+
