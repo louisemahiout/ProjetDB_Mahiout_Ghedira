@@ -7,3 +7,4 @@ alter table CATEGORIE_BILLET add constraint ck_prix check (prix_cat >= 0);
 alter table CATEGORIE_BILLET add constraint ck_place check (nbr_place_dispo >=0);
 alter table utiliser add constraint ck_quantité check (quantite > 0);
 alter table financer add constraint ck_montant_sponsor check (montant >=0);
+alter table participant add constraint ck_mail check (email_part like '%_@_%._%');
