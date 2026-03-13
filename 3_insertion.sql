@@ -1,280 +1,268 @@
--- LIEU (10)
+-- Insertion des données dans la table LIEU
+INSERT INTO LIEU (id_lieu, nom_lieu, capacite_max_lieu, ville_lieu) VALUES
+(1, 'Salle de Concert A', 500, 'Paris'),
+(2, 'Salle de Concert B', 1000, 'Lyon'),
+(3, 'Stade C', 20000, 'Marseille'),
+(4, 'Théâtre D', 300, 'Bordeaux'),
+(5, 'Palais des Congrès E', 1500, 'Toulouse'),
+(6, 'Salle Z', 700, 'Nice'),
+(7, 'Le Parc F', 5000, 'Lille'),
+(8, 'Auditorium G', 1200, 'Strasbourg'),
+(9, 'Arena H', 2500, 'Nantes'),
+(10, 'Club I', 200, 'Montpellier');
 
-INSERT INTO LIEU VALUES (1,'Accor Arena',20000,'Paris');
-INSERT INTO LIEU VALUES (2,'Zenith',6300,'Paris');
-INSERT INTO LIEU VALUES (3,'Olympia',2800,'Paris');
-INSERT INTO LIEU VALUES (4,'Stade de France',80000,'Saint-Denis');
-INSERT INTO LIEU VALUES (5,'Arena Bordeaux',11000,'Bordeaux');
-INSERT INTO LIEU VALUES (6,'Halle Tony Garnier',17000,'Lyon');
-INSERT INTO LIEU VALUES (7,'Le Bikini',1500,'Toulouse');
-INSERT INTO LIEU VALUES (8,'Arena Montpellier',14000,'Montpellier');
-INSERT INTO LIEU VALUES (9,'Zenith Nantes',9000,'Nantes');
-INSERT INTO LIEU VALUES (10,'Dome Marseille',8500,'Marseille');
+-- Insertion des données dans la table ARTISTE
+INSERT INTO ARTISTE (id_art, nom_art, type_art, nationalite_art) VALUES
+(1, 'Artiste A', 'Rock', 'Française'),
+(2, 'Artiste B', 'Pop', 'Américaine'),
+(3, 'Artiste C', 'Jazz', 'Britannique'),
+(4, 'Artiste D', 'Classique', 'Allemande'),
+(5, 'Artiste E', 'Electro', 'Française'),
+(6, 'Artiste F', 'Indie', 'Canadienne'),
+(7, 'Artiste G', 'R&B', 'Africain'),
+(8, 'Artiste H', 'Reggae', 'Jamaïquaine'),
+(9, 'Artiste I', 'Folk', 'Espagnole'),
+(10, 'Artiste J', 'Métal', 'Danoise'),
+(11, 'Artiste K', 'Chanson', 'Française'),
+(12, 'Artiste L', 'Hip-Hop', 'Néerlandaise'),
+(13, 'Artiste M', 'Punk', 'Italienne'),
+(14, 'Artiste N', 'Blues', 'Américaine'),
+(15, 'Artiste O', 'Pop', 'Suédoise');
 
+-- Insertion des données dans la table EMPLOYE
+INSERT INTO EMPLOYE (id_emp, nom_emp, fonction_emp, id_emp_superieur) VALUES
+(1, 'Jean Dupont', 'Responsable Événements', NULL),
+(2, 'Marie Dubois', 'Chargé de billetterie', 1),
+(3, 'Luc Martin', 'Technicien', 1),
+(4, 'Sophie Lefevre', 'Responsable sécurité', 1),
+(5, 'Pierre Leclerc', 'Gestionnaire matériel', 1),
+(6, 'Claire Bernard', 'Chargée de communication', 1),
+(7, 'Nicolas Granger', 'Agent d’accueil', 2),
+(8, 'Emilie Roche', 'Superviseur billetterie', 2),
+(9, 'Vincent Leroy', 'Technicien son', 3),
+(10, 'Caroline Richard', 'Logistique', 4);
 
--- ARTISTE (15)
+-- Insertion des données dans la table SPONSOR
+INSERT INTO SPONSOR (id_spons, nom_spons) VALUES
+(1, 'Sponsor A'),
+(2, 'Sponsor B'),
+(3, 'Sponsor C'),
+(4, 'Sponsor D'),
+(5, 'Sponsor E');
 
-INSERT INTO ARTISTE VALUES (1,'DJ Nova','DJ','France');
-INSERT INTO ARTISTE VALUES (2,'The Electric Waves','Groupe','USA');
-INSERT INTO ARTISTE VALUES (3,'Luna Sky','Chanteuse','UK');
-INSERT INTO ARTISTE VALUES (4,'MC Blaze','Rappeur','France');
-INSERT INTO ARTISTE VALUES (5,'Solar Beat','DJ','Germany');
-INSERT INTO ARTISTE VALUES (6,'Aurora Lights','Groupe','Sweden');
-INSERT INTO ARTISTE VALUES (7,'Leo Vega','Chanteur','Spain');
-INSERT INTO ARTISTE VALUES (8,'Night Pulse','DJ','Netherlands');
-INSERT INTO ARTISTE VALUES (9,'Golden Strings','Groupe','Italy');
-INSERT INTO ARTISTE VALUES (10,'Echo Storm','Groupe','USA');
-INSERT INTO ARTISTE VALUES (11,'Rita Flame','Chanteuse','France');
-INSERT INTO ARTISTE VALUES (12,'Urban Flow','Groupe','France');
-INSERT INTO ARTISTE VALUES (13,'Sky Rhythm','DJ','Belgium');
-INSERT INTO ARTISTE VALUES (14,'Neon Voice','Chanteuse','Canada');
-INSERT INTO ARTISTE VALUES (15,'Bass Nation','Groupe','UK');
+-- Insertion des données dans la table MATERIEL
+INSERT INTO MATERIEL (id_mat, type_mat) VALUES
+(1, 'Microphone'),
+(2, 'Haut-parleur'),
+(3, 'Table de mixage'),
+(4, 'Projecteur'),
+(5, 'Écran LED'),
+(6, 'Ordinateur'),
+(7, 'Câble audio'),
+(8, 'Ampli'),
+(9, 'Générateur'),
+(10, 'Caméra');
 
+-- Insertion des données dans la table PARTICIPANT
+INSERT INTO PARTICIPANT (id_part, nom_part, email_part, num_part) VALUES
+(1, 'Alice Dupont', 'alice.dupont@example.com', '0123456789'),
+(2, 'Bob Martin', 'bob.martin@example.com', '0123456788'),
+(3, 'Chloé Lefevre', 'chloe.lefevre@example.com', '0123456787'),
+(4, 'David Roche', 'david.roche@example.com', '0123456786'),
+(5, 'Eva Bernard', 'eva.bernard@example.com', '0123456785'),
+(6, 'François Leclerc', 'francois.leclerc@example.com', '0123456784'),
+(7, 'Gabrielle Granger', 'gabrielle.granger@example.com', '0123456783'),
+(8, 'Hélène Leroy', 'helene.leroy@example.com', '0123456782'),
+(9, 'Isabelle Richard', 'isabelle.richard@example.com', '0123456781'),
+(10, 'Jacques Lefevre', 'jacques.lefevre@example.com', '0123456780'),
+(11, 'Katherine Martin', 'katherine.martin@example.com', '0123456779'),
+(12, 'Louis Granger', 'louis.granger@example.com', '0123456778'),
+(13, 'Monique Bernard', 'monique.bernard@example.com', '0123456777'),
+(14, 'Nathalie Roche', 'nathalie.roche@example.com', '0123456776'),
+(15, 'Olivier Lefevre', 'olivier.lefevre@example.com', '0123456775'),
+(16, 'Pierre Dubois', 'pierre.dubois@example.com', '0123456774'),
+(17, 'Quentin Bernard', 'quentin.bernard@example.com', '0123456773'),
+(18, 'Rachel Leclerc', 'rachel.leclerc@example.com', '0123456772'),
+(19, 'Samuel Leroy', 'samuel.leroy@example.com', '0123456771'),
+(20, 'Thérèse Martin', 'therese.martin@example.com', '0123456770'),
+(21, 'Ursula Lefevre', 'ursula.lefevre@example.com', '0123456769'),
+(22, 'Victor Roche', 'victor.roche@example.com', '0123456768'),
+(23, 'Wendy Bernard', 'wendy.bernard@example.com', '0123456767'),
+(24, 'Xavier Granger', 'xavier.granger@example.com', '0123456766'),
+(25, 'Yvonne Leclerc', 'yvonne.leclerc@example.com', '0123456765'),
+(26, 'Zacharie Lefevre', 'zacharie.lefevre@example.com', '0123456764'),
+(27, 'Alice Richard', 'alice.richard@example.com', '0123456763'),
+(28, 'Benjamin Lefevre', 'benjamin.lefevre@example.com', '0123456762'),
+(29, 'Charlotte Bernard', 'charlotte.bernard@example.com', '0123456761'),
+(30, 'Denis Granger', 'denis.granger@example.com', '0123456760'),
+(31, 'Elise Martin', 'elise.martin@example.com', '0123456759'),
+(32, 'Fanny Roche', 'fanny.roche@example.com', '0123456758'),
+(33, 'Georges Lefevre', 'georges.lefevre@example.com', '0123456757'),
+(34, 'Hélène Granger', 'helene.granger@example.com', '0123456756'),
+(35, 'Ingrid Bernard', 'ingrid.bernard@example.com', '0123456755'),
+(36, 'Julien Leclerc', 'julien.leclerc@example.com', '0123456754'),
+(37, 'Karine Leroy', 'karine.leroy@example.com', '0123456753'),
+(38, 'Laurent Lefevre', 'laurent.lefevre@example.com', '0123456752'),
+(39, 'Marie Richard', 'marie.richard@example.com', '0123456751'),
+(40, 'Nadine Martin', 'nadine.martin@example.com', '0123456750');
 
--- EMPLOYE (10)
+-- Insertion des données dans la table EVENEMENT
+INSERT INTO EVENEMENT (id_ev, nom_ev, type_ev, date_debut_ev, date_fin_ev, statut_ev, id_lieu) VALUES
+(1, 'Concert Rock A', 'Concert', '2026-05-01', '2026-05-02', 'prevu', 1),
+(2, 'Festival Pop B', 'Festival', '2026-06-10', '2026-06-12', 'en_cours', 2),
+(3, 'Jazz Night C', 'Concert', '2026-04-15', '2026-04-16', 'terminé', 3),
+(4, 'Opéra D', 'Spectacle', '2026-07-05', '2026-07-06', 'prevu', 4),
+(5, 'Electro Party E', 'Soirée', '2026-08-01', '2026-08-02', 'annulé', 5),
+(6, 'Indie Concert F', 'Concert', '2026-09-10', '2026-09-11', 'prevu', 6),
+(7, 'Reggae Festival G', 'Festival', '2026-10-15', '2026-10-17', 'en_cours', 7),
+(8, 'Folk Music H', 'Concert', '2026-11-20', '2026-11-21', 'terminé', 8),
+(9, 'Rock Festival I', 'Festival', '2026-12-05', '2026-12-07', 'prevu', 9),
+(10, 'Hip-Hop Event J', 'Concert', '2026-12-20', '2026-12-21', 'terminé', 10);
 
-INSERT INTO EMPLOYE VALUES (1,'Martin','Directeur',NULL);
-INSERT INTO EMPLOYE VALUES (2,'Durand','Manager',1);
-INSERT INTO EMPLOYE VALUES (3,'Petit','Technicien son',2);
-INSERT INTO EMPLOYE VALUES (4,'Moreau','Technicien lumière',2);
-INSERT INTO EMPLOYE VALUES (5,'Garcia','Sécurité',2);
-INSERT INTO EMPLOYE VALUES (6,'Roux','Billetterie',2);
-INSERT INTO EMPLOYE VALUES (7,'Fournier','Communication',1);
-INSERT INTO EMPLOYE VALUES (8,'Lambert','Logistique',2);
-INSERT INTO EMPLOYE VALUES (9,'Bonnet','Accueil',2);
-INSERT INTO EMPLOYE VALUES (10,'François','Assistant',1);
+-- Insertion des données dans la table CONTRAT
+INSERT INTO CONTRAT (id_ev, id_art, id_contr, montant_contr, date_signature_contr, statut_contr) VALUES
+(1, 1, 1, 10000, '2026-01-01', 'signé'),
+(1, 2, 2, 15000, '2026-02-15', 'en cours'),
+(2, 3, 3, 20000, '2026-03-10', 'signé'),
+(3, 4, 4, 12000, '2026-04-10', 'terminé'),
+(4, 5, 5, 25000, '2026-05-20', 'signé'),
+(5, 6, 6, 3000, '2026-06-15', 'signé'),
+(6, 7, 7, 8000, '2026-07-01', 'en cours'),
+(7, 8, 8, 5000, '2026-08-10', 'terminé'),
+(8, 9, 9, 22000, '2026-09-15', 'signé'),
+(9, 10, 10, 18000, '2026-10-01', 'en cours'),
+(10, 11, 11, 12000, '2026-11-01', 'signé'),
+(1, 12, 12, 15000, '2026-01-20', 'terminé'),
+(2, 13, 13, 9000, '2026-02-20', 'en cours'),
+(3, 14, 14, 11000, '2026-03-05', 'signé'),
+(4, 15, 15, 25000, '2026-04-01', 'en cours'),
+(5, 16, 16, 15000, '2026-05-25', 'terminé'),
+(6, 17, 17, 7000, '2026-06-01', 'en cours'),
+(7, 18, 18, 16000, '2026-07-15', 'signé'),
+(8, 19, 19, 11000, '2026-08-10', 'signé'),
+(9, 20, 20, 17000, '2026-09-20', 'en cours'),
+(10, 21, 21, 13000, '2026-10-05', 'terminé'),
+(1, 22, 22, 10000, '2026-11-01', 'en cours'),
+(2, 23, 23, 6000, '2026-12-01', 'signé'),
+(3, 24, 24, 14000, '2026-01-25', 'signé'),
+(4, 25, 25, 9000, '2026-02-10', 'terminé'),
+(5, 26, 26, 3000, '2026-03-15', 'signé'),
+(6, 27, 27, 7000, '2026-04-25', 'en cours'),
+(7, 28, 28, 11000, '2026-05-30', 'terminé'),
+(8, 29, 29, 8000, '2026-06-05', 'signé'),
+(9, 30, 30, 12000, '2026-07-20', 'signé');
 
+-- Insertion des données dans la table CATEGORIE_BILLET
+INSERT INTO CATEGORIE_BILLET (id_cat, prix_cat, nbr_place_dispo, id_ev) VALUES
+(1, 50, 100, 1),
+(2, 75, 150, 2),
+(3, 30, 200, 3),
+(4, 20, 500, 4),
+(5, 100, 50, 5);
 
--- SPONSOR (5)
+-- Insertion des données dans la table BILLET
+INSERT INTO BILLET (id_billet, id_cat, id_part) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 2, 3),
+(4, 2, 4),
+(5, 3, 5),
+(6, 3, 6),
+(7, 4, 7),
+(8, 4, 8),
+(9, 5, 9),
+(10, 5, 10),
+(11, 1, 11),
+(12, 1, 12),
+(13, 2, 13),
+(14, 2, 14),
+(15, 3, 15),
+(16, 3, 16),
+(17, 4, 17),
+(18, 4, 18),
+(19, 5, 19),
+(20, 5, 20),
+(21, 1, 21),
+(22, 1, 22),
+(23, 2, 23),
+(24, 2, 24),
+(25, 3, 25),
+(26, 3, 26),
+(27, 4, 27),
+(28, 4, 28),
+(29, 5, 29),
+(30, 5, 30),
+(31, 1, 31),
+(32, 1, 32),
+(33, 2, 33),
+(34, 2, 34),
+(35, 3, 35),
+(36, 3, 36),
+(37, 4, 37),
+(38, 4, 38),
+(39, 5, 39),
+(40, 5, 40),
+(41, 1, 1),
+(42, 1, 2),
+(43, 2, 3),
+(44, 2, 4),
+(45, 3, 5),
+(46, 3, 6),
+(47, 4, 7),
+(48, 4, 8),
+(49, 5, 9),
+(50, 5, 10);
 
-INSERT INTO SPONSOR VALUES (1,'RedBull');
-INSERT INTO SPONSOR VALUES (2,'Spotify');
-INSERT INTO SPONSOR VALUES (3,'Nike');
-INSERT INTO SPONSOR VALUES (4,'CocaCola');
-INSERT INTO SPONSOR VALUES (5,'Adidas');
+-- Insertion des données dans la table AFFECTER
+INSERT INTO AFFECTER (id_ev, id_emp) VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(2, 4),
+(3, 5),
+(3, 6),
+(4, 7),
+(4, 8),
+(5, 9),
+(5, 10),
+(6, 1),
+(6, 2),
+(7, 3),
+(7, 4),
+(8, 5),
+(8, 6),
+(9, 7),
+(9, 8),
+(10, 9),
+(10, 10);
 
+-- Insertion des données dans la table UTILISER
+INSERT INTO UTILISER (id_ev, id_mat, quantite) VALUES
+(1, 1, 5),
+(1, 2, 3),
+(2, 3, 4),
+(2, 4, 6),
+(3, 5, 2),
+(3, 6, 1),
+(4, 7, 5),
+(4, 8, 3),
+(5, 9, 2),
+(5, 10, 4),
+(6, 1, 6),
+(6, 2, 7),
+(7, 3, 3),
+(7, 4, 8),
+(8, 5, 4),
+(8, 6, 3),
+(9, 7, 2),
+(9, 8, 6),
+(10, 9, 5),
+(10, 10, 1);
 
--- MATERIEL (10)
-
-INSERT INTO MATERIEL VALUES (1,'Enceinte');
-INSERT INTO MATERIEL VALUES (2,'Microphone');
-INSERT INTO MATERIEL VALUES (3,'Projecteur');
-INSERT INTO MATERIEL VALUES (4,'Table mixage');
-INSERT INTO MATERIEL VALUES (5,'Laser');
-INSERT INTO MATERIEL VALUES (6,'Amplificateur');
-INSERT INTO MATERIEL VALUES (7,'Camera');
-INSERT INTO MATERIEL VALUES (8,'Ecran LED');
-INSERT INTO MATERIEL VALUES (9,'Barriere securite');
-INSERT INTO MATERIEL VALUES (10,'Scene mobile');
-
-
--- PARTICIPANT (40)
-
-INSERT INTO PARTICIPANT VALUES (1,'Alice Martin','alice.martin@email.com','0600000001');
-INSERT INTO PARTICIPANT VALUES (2,'Lucas Bernard','lucas.bernard@email.com','0600000002');
-INSERT INTO PARTICIPANT VALUES (3,'Emma Robert','emma.robert@email.com','0600000003');
-INSERT INTO PARTICIPANT VALUES (4,'Hugo Richard','hugo.richard@email.com','0600000004');
-INSERT INTO PARTICIPANT VALUES (5,'Chloe Petit','chloe.petit@email.com','0600000005');
-INSERT INTO PARTICIPANT VALUES (6,'Nathan Durand','nathan.durand@email.com','0600000006');
-INSERT INTO PARTICIPANT VALUES (7,'Sarah Moreau','sarah.moreau@email.com','0600000007');
-INSERT INTO PARTICIPANT VALUES (8,'Leo Simon','leo.simon@email.com','0600000008');
-INSERT INTO PARTICIPANT VALUES (9,'Laura Laurent','laura.laurent@email.com','0600000009');
-INSERT INTO PARTICIPANT VALUES (10,'Tom Michel','tom.michel@email.com','0600000010');
-INSERT INTO PARTICIPANT VALUES (11,'Julie Garcia','julie.garcia@email.com','0600000011');
-INSERT INTO PARTICIPANT VALUES (12,'Maxime Roux','maxime.roux@email.com','0600000012');
-INSERT INTO PARTICIPANT VALUES (13,'Clara Vincent','clara.vincent@email.com','0600000013');
-INSERT INTO PARTICIPANT VALUES (14,'Paul Fournier','paul.fournier@email.com','0600000014');
-INSERT INTO PARTICIPANT VALUES (15,'Ines Girard','ines.girard@email.com','0600000015');
-INSERT INTO PARTICIPANT VALUES (16,'Noah Andre','noah.andre@email.com','0600000016');
-INSERT INTO PARTICIPANT VALUES (17,'Lena Mercier','lena.mercier@email.com','0600000017');
-INSERT INTO PARTICIPANT VALUES (18,'Adam Dupont','adam.dupont@email.com','0600000018');
-INSERT INTO PARTICIPANT VALUES (19,'Eva Fontaine','eva.fontaine@email.com','0600000019');
-INSERT INTO PARTICIPANT VALUES (20,'Louis Chevalier','louis.chevalier@email.com','0600000020');
-INSERT INTO PARTICIPANT VALUES (21,'Manon Paris','manon.paris@email.com','0600000021');
-INSERT INTO PARTICIPANT VALUES (22,'Theo Noel','theo.noel@email.com','0600000022');
-INSERT INTO PARTICIPANT VALUES (23,'Lola Perrot','lola.perrot@email.com','0600000023');
-INSERT INTO PARTICIPANT VALUES (24,'Jules Collet','jules.collet@email.com','0600000024');
-INSERT INTO PARTICIPANT VALUES (25,'Mila Renard','mila.renard@email.com','0600000025');
-INSERT INTO PARTICIPANT VALUES (26,'Gabriel Marchand','gabriel.marchand@email.com','0600000026');
-INSERT INTO PARTICIPANT VALUES (27,'Camille Blanchard','camille.blanchard@email.com','0600000027');
-INSERT INTO PARTICIPANT VALUES (28,'Arthur Giraud','arthur.giraud@email.com','0600000028');
-INSERT INTO PARTICIPANT VALUES (29,'Anna Barbier','anna.barbier@email.com','0600000029');
-INSERT INTO PARTICIPANT VALUES (30,'Sacha Rey','sacha.rey@email.com','0600000030');
-INSERT INTO PARTICIPANT VALUES (31,'Lina Caron','lina.caron@email.com','0600000031');
-INSERT INTO PARTICIPANT VALUES (32,'Noe Vidal','noe.vidal@email.com','0600000032');
-INSERT INTO PARTICIPANT VALUES (33,'Lea Pires','lea.pires@email.com','0600000033');
-INSERT INTO PARTICIPANT VALUES (34,'Ethan Lemoine','ethan.lemoine@email.com','0600000034');
-INSERT INTO PARTICIPANT VALUES (35,'Julia Roy','julia.roy@email.com','0600000035');
-INSERT INTO PARTICIPANT VALUES (36,'Nolan Marchal','nolan.marchal@email.com','0600000036');
-INSERT INTO PARTICIPANT VALUES (37,'Zoé Brun','zoe.brun@email.com','0600000037');
-INSERT INTO PARTICIPANT VALUES (38,'Mathis Charles','mathis.charles@email.com','0600000038');
-INSERT INTO PARTICIPANT VALUES (39,'Elise Gauthier','elise.gauthier@email.com','0600000039');
-INSERT INTO PARTICIPANT VALUES (40,'Victor Meunier','victor.meunier@email.com','0600000040');
-
-
--- EVENEMENT (10)
-
-INSERT INTO EVENEMENT VALUES (1,'Electro Night','Concert','2026-05-10','2026-05-10','Planifie',1);
-INSERT INTO EVENEMENT VALUES (2,'Summer Beats','Festival','2026-06-12','2026-06-14','Planifie',4);
-INSERT INTO EVENEMENT VALUES (3,'Rock Arena','Concert','2026-04-20','2026-04-20','Planifie',5);
-INSERT INTO EVENEMENT VALUES (4,'Urban Fest','Festival','2026-07-01','2026-07-03','Planifie',6);
-INSERT INTO EVENEMENT VALUES (5,'Pop Lights','Concert','2026-03-25','2026-03-25','Planifie',3);
-INSERT INTO EVENEMENT VALUES (6,'DJ Masters','Concert','2026-08-12','2026-08-12','Planifie',2);
-INSERT INTO EVENEMENT VALUES (7,'Night Vibes','Concert','2026-09-05','2026-09-05','Planifie',9);
-INSERT INTO EVENEMENT VALUES (8,'Sound Wave','Festival','2026-07-20','2026-07-22','Planifie',8);
-INSERT INTO EVENEMENT VALUES (9,'Bass Explosion','Concert','2026-10-15','2026-10-15','Planifie',10);
-INSERT INTO EVENEMENT VALUES (10,'Indie Music Day','Concert','2026-11-10','2026-11-10','Planifie',7);
-
-
--- CATEGORIE_BILLET (5)
-
-INSERT INTO CATEGORIE_BILLET VALUES (1,50,500,1);
-INSERT INTO CATEGORIE_BILLET VALUES (2,80,400,2);
-INSERT INTO CATEGORIE_BILLET VALUES (3,40,300,3);
-INSERT INTO CATEGORIE_BILLET VALUES (4,100,200,4);
-INSERT INTO CATEGORIE_BILLET VALUES (5,60,350,5);
-
-
--- CONTRAT (30)
-
-INSERT INTO CONTRAT VALUES (1,1,1,15000,'2025-12-10','Signe');
-INSERT INTO CONTRAT VALUES (1,5,2,12000,'2025-12-11','Signe');
-INSERT INTO CONTRAT VALUES (2,2,3,30000,'2026-01-10','Signe');
-INSERT INTO CONTRAT VALUES (2,3,4,20000,'2026-01-11','Signe');
-INSERT INTO CONTRAT VALUES (2,4,5,18000,'2026-01-12','Signe');
-INSERT INTO CONTRAT VALUES (3,6,6,14000,'2026-01-20','Signe');
-INSERT INTO CONTRAT VALUES (3,7,7,13000,'2026-01-22','Signe');
-INSERT INTO CONTRAT VALUES (3,8,8,16000,'2026-01-23','Signe');
-INSERT INTO CONTRAT VALUES (4,9,9,22000,'2026-02-01','Signe');
-INSERT INTO CONTRAT VALUES (4,10,10,21000,'2026-02-02','Signe');
-INSERT INTO CONTRAT VALUES (4,11,11,19000,'2026-02-03','Signe');
-INSERT INTO CONTRAT VALUES (5,12,12,17000,'2026-02-10','Signe');
-INSERT INTO CONTRAT VALUES (5,13,13,16000,'2026-02-11','Signe');
-INSERT INTO CONTRAT VALUES (5,14,14,15000,'2026-02-12','Signe');
-INSERT INTO CONTRAT VALUES (6,15,15,20000,'2026-02-15','Signe');
-INSERT INTO CONTRAT VALUES (6,1,16,14000,'2026-02-16','Signe');
-INSERT INTO CONTRAT VALUES (6,2,17,13000,'2026-02-17','Signe');
-INSERT INTO CONTRAT VALUES (7,3,18,11000,'2026-02-20','Signe');
-INSERT INTO CONTRAT VALUES (7,4,19,12000,'2026-02-21','Signe');
-INSERT INTO CONTRAT VALUES (7,5,20,12500,'2026-02-22','Signe');
-INSERT INTO CONTRAT VALUES (8,6,21,18000,'2026-02-25','Signe');
-INSERT INTO CONTRAT VALUES (8,7,22,17500,'2026-02-26','Signe');
-INSERT INTO CONTRAT VALUES (8,8,23,16000,'2026-02-27','Signe');
-INSERT INTO CONTRAT VALUES (9,9,24,19000,'2026-03-01','Signe');
-INSERT INTO CONTRAT VALUES (9,10,25,20000,'2026-03-02','Signe');
-INSERT INTO CONTRAT VALUES (9,11,26,21000,'2026-03-03','Signe');
-INSERT INTO CONTRAT VALUES (10,12,27,15000,'2026-03-05','Signe');
-INSERT INTO CONTRAT VALUES (10,13,28,14000,'2026-03-06','Signe');
-INSERT INTO CONTRAT VALUES (10,14,29,16000,'2026-03-07','Signe');
-INSERT INTO CONTRAT VALUES (10,15,30,17000,'2026-03-08','Signe');
-
-
--- BILLET (50)
-
-INSERT INTO BILLET VALUES (1,1,1);
-INSERT INTO BILLET VALUES (2,1,2);
-INSERT INTO BILLET VALUES (3,1,3);
-INSERT INTO BILLET VALUES (4,1,4);
-INSERT INTO BILLET VALUES (5,1,5);
-INSERT INTO BILLET VALUES (6,2,6);
-INSERT INTO BILLET VALUES (7,2,7);
-INSERT INTO BILLET VALUES (8,2,8);
-INSERT INTO BILLET VALUES (9,2,9);
-INSERT INTO BILLET VALUES (10,2,10);
-INSERT INTO BILLET VALUES (11,3,11);
-INSERT INTO BILLET VALUES (12,3,12);
-INSERT INTO BILLET VALUES (13,3,13);
-INSERT INTO BILLET VALUES (14,3,14);
-INSERT INTO BILLET VALUES (15,3,15);
-INSERT INTO BILLET VALUES (16,4,16);
-INSERT INTO BILLET VALUES (17,4,17);
-INSERT INTO BILLET VALUES (18,4,18);
-INSERT INTO BILLET VALUES (19,4,19);
-INSERT INTO BILLET VALUES (20,4,20);
-INSERT INTO BILLET VALUES (21,5,21);
-INSERT INTO BILLET VALUES (22,5,22);
-INSERT INTO BILLET VALUES (23,5,23);
-INSERT INTO BILLET VALUES (24,5,24);
-INSERT INTO BILLET VALUES (25,5,25);
-INSERT INTO BILLET VALUES (26,1,26);
-INSERT INTO BILLET VALUES (27,2,27);
-INSERT INTO BILLET VALUES (28,3,28);
-INSERT INTO BILLET VALUES (29,4,29);
-INSERT INTO BILLET VALUES (30,5,30);
-INSERT INTO BILLET VALUES (31,1,31);
-INSERT INTO BILLET VALUES (32,2,32);
-INSERT INTO BILLET VALUES (33,3,33);
-INSERT INTO BILLET VALUES (34,4,34);
-INSERT INTO BILLET VALUES (35,5,35);
-INSERT INTO BILLET VALUES (36,1,36);
-INSERT INTO BILLET VALUES (37,2,37);
-INSERT INTO BILLET VALUES (38,3,38);
-INSERT INTO BILLET VALUES (39,4,39);
-INSERT INTO BILLET VALUES (40,5,40);
-INSERT INTO BILLET VALUES (41,1,1);
-INSERT INTO BILLET VALUES (42,2,2);
-INSERT INTO BILLET VALUES (43,3,3);
-INSERT INTO BILLET VALUES (44,4,4);
-INSERT INTO BILLET VALUES (45,5,5);
-INSERT INTO BILLET VALUES (46,1,6);
-INSERT INTO BILLET VALUES (47,2,7);
-INSERT INTO BILLET VALUES (48,3,8);
-INSERT INTO BILLET VALUES (49,4,9);
-INSERT INTO BILLET VALUES (50,5,10);
-
-
--- AFFECTER (20)
-
-INSERT INTO AFFECTER VALUES (1,2);
-INSERT INTO AFFECTER VALUES (1,3);
-INSERT INTO AFFECTER VALUES (2,4);
-INSERT INTO AFFECTER VALUES (2,5);
-INSERT INTO AFFECTER VALUES (3,6);
-INSERT INTO AFFECTER VALUES (3,7);
-INSERT INTO AFFECTER VALUES (4,8);
-INSERT INTO AFFECTER VALUES (4,9);
-INSERT INTO AFFECTER VALUES (5,10);
-INSERT INTO AFFECTER VALUES (5,2);
-INSERT INTO AFFECTER VALUES (6,3);
-INSERT INTO AFFECTER VALUES (6,4);
-INSERT INTO AFFECTER VALUES (7,5);
-INSERT INTO AFFECTER VALUES (7,6);
-INSERT INTO AFFECTER VALUES (8,7);
-INSERT INTO AFFECTER VALUES (8,8);
-INSERT INTO AFFECTER VALUES (9,9);
-INSERT INTO AFFECTER VALUES (9,10);
-INSERT INTO AFFECTER VALUES (10,2);
-INSERT INTO AFFECTER VALUES (10,3);
-
-
--- UTILISER (20)
-
-INSERT INTO UTILISER VALUES (1,1,20);
-INSERT INTO UTILISER VALUES (1,2,10);
-INSERT INTO UTILISER VALUES (2,3,30);
-INSERT INTO UTILISER VALUES (2,4,5);
-INSERT INTO UTILISER VALUES (3,5,8);
-INSERT INTO UTILISER VALUES (3,6,10);
-INSERT INTO UTILISER VALUES (4,7,6);
-INSERT INTO UTILISER VALUES (4,8,4);
-INSERT INTO UTILISER VALUES (5,9,50);
-INSERT INTO UTILISER VALUES (5,10,1);
-INSERT INTO UTILISER VALUES (6,1,15);
-INSERT INTO UTILISER VALUES (6,3,12);
-INSERT INTO UTILISER VALUES (7,4,4);
-INSERT INTO UTILISER VALUES (7,5,6);
-INSERT INTO UTILISER VALUES (8,6,7);
-INSERT INTO UTILISER VALUES (8,7,3);
-INSERT INTO UTILISER VALUES (9,8,5);
-INSERT INTO UTILISER VALUES (9,9,40);
-INSERT INTO UTILISER VALUES (10,2,12);
-INSERT INTO UTILISER VALUES (10,10,1);
-
-
--- FINANCER (5)
-
-INSERT INTO FINANCER VALUES (1,1,20000);
-INSERT INTO FINANCER VALUES (2,2,50000);
-INSERT INTO FINANCER VALUES (3,3,15000);
-INSERT INTO FINANCER VALUES (4,4,30000);
-INSERT INTO FINANCER VALUES (5,5,25000);
+-- Insertion des données dans la table FINANCER
+INSERT INTO FINANCER (id_ev, id_spons, montant) VALUES
+(1, 1, 5000),
+(2, 2, 10000),
+(3, 3, 15000),
+(4, 4, 20000),
+(5, 5, 3000);
