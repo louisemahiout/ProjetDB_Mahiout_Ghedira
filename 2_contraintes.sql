@@ -1,8 +1,8 @@
-alter table lieu add constraint ck_capacite check (capacité_max_lieu > 0);
+alter table lieu add constraint ck_capacite_lieu check (capacité_max_lieu > 0);
 alter table evenement add constraint ck_statut check( statut_ev IN ('prevu','en_cours','terminé','annulé'));
 alter table evenement add constraint ck_date check ( date_debut_ev <= date_fin_ev);
 alter table contrat add constraint ck__montant check (montant_contr > 0);
-alter table contrat add constraint ck_statut_contrat check (statut_cont IN ('signé','en cours','terminé'));
+alter table contrat add constraint ck_statut_contrat check (statut_contr IN ('signé','en cours','terminé'));
 alter table CATEGORIE_BILLET add constraint ck_prix check (prix_cat >= 0);
 alter table CATEGORIE_BILLET add constraint ck_place check (nbr_place_dispo >=0);
 alter table utiliser add constraint ck_quantité check (quantite > 0);
