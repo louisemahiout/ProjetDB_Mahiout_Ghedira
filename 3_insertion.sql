@@ -1,5 +1,5 @@
 -- Insertion des données dans la table LIEU
-INSERT INTO LIEU (id_lieu, nom_lieu, capacite_max_lieu, ville_lieu) VALUES
+INSERT INTO LIEU (id_lieu, nom_lieu, capacité_max_lieu, ville_lieu) VALUES
 (1, 'Salle de Concert A', 500, 'Paris'),
 (2, 'Salle de Concert B', 1000, 'Lyon'),
 (3, 'Stade C', 20000, 'Marseille'),
@@ -30,7 +30,7 @@ INSERT INTO ARTISTE (id_art, nom_art, type_art, nationalite_art) VALUES
 (15, 'Artiste O', 'Pop', 'Suédoise');
 
 -- Insertion des données dans la table EMPLOYE
-INSERT INTO EMPLOYE (id_emp, nom_emp, fonction_emp, id_emp_superieur) VALUES
+INSERT INTO EMPLOYE (id_emp, nom_emp, fonction_emp, id_emp_supérieur) VALUES
 (1, 'Jean Dupont', 'Responsable Événements', NULL),
 (2, 'Marie Dubois', 'Chargé de billetterie', 1),
 (3, 'Luc Martin', 'Technicien', 1),
@@ -135,22 +135,22 @@ INSERT INTO CONTRAT (id_ev, id_art, id_contr, montant_contr, date_signature_cont
 (1, 12, 12, 15000, '2026-01-20', 'terminé'),
 (2, 13, 13, 9000, '2026-02-20', 'en cours'),
 (3, 14, 14, 11000, '2026-03-05', 'signé'),
-(4, 15, 15, 25000, '2026-04-01', 'en cours'),
-(5, 16, 16, 15000, '2026-05-25', 'terminé'),
-(6, 17, 17, 7000, '2026-06-01', 'en cours'),
-(7, 18, 18, 16000, '2026-07-15', 'signé'),
-(8, 19, 19, 11000, '2026-08-10', 'signé'),
-(9, 20, 20, 17000, '2026-09-20', 'en cours'),
-(10, 21, 21, 13000, '2026-10-05', 'terminé'),
-(1, 22, 22, 10000, '2026-11-01', 'en cours'),
-(2, 23, 23, 6000, '2026-12-01', 'signé'),
-(3, 24, 24, 14000, '2026-01-25', 'signé'),
-(4, 25, 25, 9000, '2026-02-10', 'terminé'),
-(5, 26, 26, 3000, '2026-03-15', 'signé'),
-(6, 27, 27, 7000, '2026-04-25', 'en cours'),
-(7, 28, 28, 11000, '2026-05-30', 'terminé'),
-(8, 29, 29, 8000, '2026-06-05', 'signé'),
-(9, 30, 30, 12000, '2026-07-20', 'signé');
+(4, 2, 15, 25000, '2026-04-01', 'en cours'),
+(5, 5, 16, 15000, '2026-05-25', 'terminé'),
+(6, 9, 17, 7000, '2026-06-01', 'en cours'),
+(7, 11, 18, 16000, '2026-07-15', 'signé'),
+(8, 3, 19, 11000, '2026-08-10', 'signé'),
+(9, 4, 20, 17000, '2026-09-20', 'en cours'),
+(10, 10, 21, 13000, '2026-10-05', 'terminé'),
+(1, 12, 22, 10000, '2026-11-01', 'en cours'),
+(2, 6, 23, 6000, '2026-12-01', 'signé'),
+(3, 5, 24, 14000, '2026-01-25', 'signé'),
+(4, 8, 25, 9000, '2026-02-10', 'terminé'),
+(5, 10, 26, 3000, '2026-03-15', 'signé'),
+(6, 2, 27, 7000, '2026-04-25', 'en cours'),
+(7, 1, 28, 11000, '2026-05-30', 'terminé'),
+(8, 7, 29, 8000, '2026-06-05', 'signé'),
+(9, 6, 30, 12000, '2026-07-20', 'signé');
 
 -- Insertion des données dans la table CATEGORIE_BILLET
 INSERT INTO CATEGORIE_BILLET (id_cat, prix_cat, nbr_place_dispo, id_ev) VALUES
