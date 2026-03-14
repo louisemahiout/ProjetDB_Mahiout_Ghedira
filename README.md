@@ -207,7 +207,7 @@ FINANCER = (#id_ev, #id_spons, montant DECIMAL(12,2));
 
 Scénario d'utilisation:
 
-La base de données a été conçue pour gérer l’organisation d’événements musicaux tels que des concerts ou des festivals organisés dans différents lieux et villes. Elle est utilisée par une toute nouvelle entreprise privée spécialisée dans la production d’événements musicaux nommée SNLAgency, qui s’occupe de planifier les événements, de gérer les artistes invités, de vendre des billets aux participants et de gérer les relations avec les sponsors.
+La base de données a été conçue pour gérer l’organisation d’événements musicaux tels que des concerts ou des festivals organisés dans différents lieux et villes. Elle est utilisée par une toute nouvelle entreprise privée spécialisée dans la production d’événements musicaux nommée RhythmSphere, qui s’occupe de planifier les événements, de gérer les artistes invités, de vendre des billets aux participants et de gérer les relations avec les sponsors.
 
 Dans ce contexte, l’utilisateur principal de la base de données est le responsable de production événementielle. Son rôle est de superviser l’organisation des événements et de s’assurer que toutes les ressources nécessaires sont bien mobilisées pour leur bon déroulement.
 
