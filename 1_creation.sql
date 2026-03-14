@@ -1,3 +1,4 @@
+-- Table Lieu:
 CREATE TABLE LIEU(
    id_lieu INT,
    nom_lieu VARCHAR(100) NOT NULL,
@@ -6,6 +7,7 @@ CREATE TABLE LIEU(
    PRIMARY KEY(id_lieu)
 );
 
+-- Table Artiste:
 CREATE TABLE ARTISTE(
    id_art INT,
    nom_art VARCHAR(100) NOT NULL,
@@ -14,6 +16,7 @@ CREATE TABLE ARTISTE(
    PRIMARY KEY(id_art)
 );
 
+-- Table Employé:
 CREATE TABLE EMPLOYE(
    id_emp INT,
    nom_emp VARCHAR(50) NOT NULL,
@@ -21,22 +24,25 @@ CREATE TABLE EMPLOYE(
    id_emp_supérieur INT,
    PRIMARY KEY(id_emp),
    FOREIGN KEY(id_emp_supérieur) REFERENCES EMPLOYE(id_emp)
-   on delete set null
-   on update cascade
+   ON DELETE SET NULL
+   ON UPDATE CASCADE
 );
 
+-- Table Sponsor:
 CREATE TABLE SPONSOR(
    id_spons INT,
    nom_spons VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_spons)
 );
 
+-- Table materiel:
 CREATE TABLE MATERIEL(
    id_mat INT,
    type_mat VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_mat)
 );
 
+-- Table Participant:
 CREATE TABLE PARTICIPANT(
    id_part INT,
    nom_part VARCHAR(50) NOT NULL,
@@ -46,6 +52,7 @@ CREATE TABLE PARTICIPANT(
    UNIQUE(email_part , num_part)
 );
 
+-- Table Evénement:
 CREATE TABLE EVENEMENT(
    id_ev INT,
    nom_ev VARCHAR(100) NOT NULL,
@@ -56,11 +63,12 @@ CREATE TABLE EVENEMENT(
    id_lieu INT,
    PRIMARY KEY(id_ev),
    FOREIGN KEY(id_lieu) REFERENCES LIEU(id_lieu)
-   on delete set NULL
-   on update cascade
+   ON DELETE SET NULL
+   ON UPDATE CASCADE
    
 );
 
+-- Table Contrat:
 CREATE TABLE CONTRAT(
    id_ev INT,
    id_art INT,
@@ -70,13 +78,14 @@ CREATE TABLE CONTRAT(
    statut_contr VARCHAR(20) NOT NULL,
    PRIMARY KEY(id_ev, id_art, id_contr),
    FOREIGN KEY(id_ev) REFERENCES EVENEMENT(id_ev)
-   on delete cascade
-   on update cascade,
+   ON DELETE CASCADE
+   ON UPDATE CASCADE,
    FOREIGN KEY(id_art) REFERENCES ARTISTE(id_art)
-   on delete cascade
-   on update cascade
+   ON DELETE CASCADE
+   ON UPDATE CASCADE
 );
 
+-- Table Categorie Billet:
 CREATE TABLE CATEGORIE_BILLET(
    id_cat INT,
    prix_cat INT NOT NULL,
@@ -84,57 +93,61 @@ CREATE TABLE CATEGORIE_BILLET(
    id_ev INT,
    PRIMARY KEY(id_cat),
    FOREIGN KEY(id_ev) REFERENCES EVENEMENT(id_ev)
-   on delete set NULL
-   on update cascade
+   ON DELETE SET NULL
+   ON UPDATE CASCADE
 );
 
+-- Table Billet:
 CREATE TABLE BILLET(
    id_billet INT,
    id_cat INT,
    id_part INT,
    PRIMARY KEY(id_billet),
    FOREIGN KEY(id_cat) REFERENCES CATEGORIE_BILLET(id_cat)
-   on delete cascade
-   on update cascade,
+   ON DELETE CASCADE
+   ON UPDATE CASCADE,
    FOREIGN KEY(id_part) REFERENCES PARTICIPANT(id_part)
-   on delete set NULL
-   on update cascade
+   ON DELETE SET NULL
+   ON UPDATE CASCADE
 );
 
+-- Table Affecter:
 CREATE TABLE AFFECTER(
    id_ev INT,
    id_emp INT,
    PRIMARY KEY(id_ev, id_emp),
    FOREIGN KEY(id_ev) REFERENCES EVENEMENT(id_ev)
-   on delete cascade
-   on update cascade,
+   ON DELETE CASCADE
+   ON UPDATE CASCADE,
    FOREIGN KEY(id_emp) REFERENCES EMPLOYE(id_emp)
-   on delete cascade
-   on update cascade
+   ON DELETE CASCADE
+   ON UPDATE CASCADE
 );
 
+-- Table Utliser:
 CREATE TABLE UTILISER(
    id_ev INT,
    id_mat INT,
    quantite INT NOT NULL,
    PRIMARY KEY(id_ev, id_mat),
    FOREIGN KEY(id_ev) REFERENCES EVENEMENT(id_ev)
-    on delete cascade
-   on update cascade,
+   ON DELETE CASCADE
+   ON UPDATE CASCADE,
    FOREIGN KEY(id_mat) REFERENCES MATERIEL(id_mat)
-    on delete cascade
-   on update cascade
+   ON DELETE CASCADE
+   ON UPDATE CASCADE
 );
 
+-- Table Financer:
 CREATE TABLE FINANCER(
    id_ev INT,
    id_spons INT,
    montant DECIMAL(12,2) NOT NULL,
    PRIMARY KEY(id_ev, id_spons),
    FOREIGN KEY(id_ev) REFERENCES EVENEMENT(id_ev)
-   on delete cascade
-   on update cascade,
+   ON DELETE CASCADE
+   ON UPDATE CASCADE,
    FOREIGN KEY(id_spons) REFERENCES SPONSOR(id_spons)
-   on delete cascade
-   on update cascade
+   ON DELETE CASCADE
+   ON UPDATE CASCADE
 );
